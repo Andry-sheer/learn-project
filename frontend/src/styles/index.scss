@@ -1,0 +1,10 @@
+@use "fonts.scss";
+@use "reset.scss";
+@use "vars.scss" as *;
+
+body {
+  font-weight: 400;
+  color: $textColor;
+  font-weight: 600;
+  font-family: "Inter";
+}
