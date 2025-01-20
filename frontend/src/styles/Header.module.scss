@@ -1,0 +1,131 @@
+@use "vars.scss" as *;
+
+.header {
+  background: $bgSilvaAlt;
+  border-bottom: 1px solid $basicWhite;
+
+	&__container {
+    padding: 21px;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	}
+
+	&__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+
+    &_img {
+      width: 50px;
+      height: 50px;
+		}
+
+		&_title {
+      color: $textColor;
+		}
+	}
+
+  &__themeChange {
+    padding: 5px;
+    border-radius: $radius-md;
+    background: transparent;
+    border: 2px solid $bgSilva;
+    cursor: pointer;
+
+    &_icon {
+      fill: $textColor;
+    }
+  }
+
+  &__search {
+    position: relative;
+
+    &_button {
+      background-color: transparent;
+      position: absolute;
+      left: 5px;
+      top: 3px;
+      width: 30px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    &_icon {
+      fill: $textColor;
+    }
+
+    &_input {
+      border-radius: $radius-md;
+      border: none;
+      outline: none;
+      padding: 5px 10px;
+      color: $textColor;
+      background-color: $bgSilva;
+      font-weight: 600;
+      padding-left: 40px;
+      border: 2px solid transparent;
+
+      &::placeholder {
+        color: $basicWhite;
+      }
+
+      &:focus {
+        border: 2px solid $basicWhite;
+      }
+    }
+  }
+
+  &__navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    &_link {
+      text-decoration: none;
+      color: $textColor;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    &_link_active {
+      text-decoration: none;
+      color: $bgSilva;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+
+  &__profile {
+
+    &_photo {
+      border-radius: $radius-rounded;
+      border: 2px solid $bgSilva;
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+      background-color: $severColor;
+    }
+  }
+
+  &__singIn {
+    border-radius: $radius-md;
+    border: 2px solid $textColor;
+    padding: 10px;
+    text-decoration: none;
+    color: $textColor;
+    transition: linear .3s;
+    font-weight: 600;
+
+    &:hover {
+      color: $bgSilva;
+      border: 2px solid $bgSilva;
+    }
+  }
+}

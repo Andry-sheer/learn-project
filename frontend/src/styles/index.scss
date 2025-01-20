@@ -3,8 +3,8 @@
 @use "vars.scss" as *;
 
 body {
-  font-weight: 400;
   color: $textColor;
-  font-weight: 600;
+  font-weight: 400;
   font-family: "Inter";
+  background: $bgSilva;
 }
