@@ -14,46 +14,46 @@ import { FaMoon } from "react-icons/fa6";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.header__container}>
-        <Link className={styles.header__logo} to="/">
-          <img className={styles.header__logo_img} src={logo} alt="Logo" />
-          <span className={styles.header__logo_title}>Header</span>
+      <div className={styles.container}>
+        <Link className={styles.logoContainer} to="/">
+          <img className={styles.logo} src={logo} alt="Logo" />
+          <span className={styles.title}>Header</span>
         </Link>
 
-        <form className={styles.header__search}>
+        <form className={styles.search}>
           <Input
-            className={styles.header__search_input}
+            className={styles.searchInput}
             type="text"
             placeholder="search..."
             name="search"
           />
 
           <MyButton
-            className={styles.header__search_button}
+            className={styles.searchButton}
             type="submit"
-            icon={<LiaSearchSolid className={styles.header__search_icon}/>}
+            icon={<LiaSearchSolid className={styles.searchIcon}/>}
           />
         </form>
 
         <MyButton 
-          className={styles.header__themeChange}
+          className={styles.themeChange}
           type="button"
-          icon={<FaMoon className={styles.header__themeChange_icon} />}
+          icon={<FaMoon className={styles.themeChangeIcon} />}
           // icon={<HiSun />}
         />
 
-        <div className={styles.header__navbar}>
-          <NavLink className={({ isActive }) => isActive ? `${styles.header__navbar_link_active}` : `${styles.header__navbar_link}`} to="/home">home</NavLink>
-          <NavLink className={({ isActive }) => isActive ? `${styles.header__navbar_link_active}` : `${styles.header__navbar_link}`} to="/about">about</NavLink>
-          <NavLink className={({ isActive }) => isActive ? `${styles.header__navbar_link_active}` : `${styles.header__navbar_link}`} to="/projects">projects</NavLink>
+        <div className={styles.navbar}>
+          <NavLink className={({ isActive }) => isActive ? `${styles.navbarLinkActive}` : `${styles.navbarLink}`} to="/home">home</NavLink>
+          <NavLink className={({ isActive }) => isActive ? `${styles.navbarLinkActive}` : `${styles.navbarLink}`} to="/about">about</NavLink>
+          <NavLink className={({ isActive }) => isActive ? `${styles.navbarLinkActive}` : `${styles.navbarLink}`} to="/projects">projects</NavLink>
         </div>
 
-        <Link className={styles.header__singIn} to="/sing-in">
+        <Link className={styles.singIn} to="/sing-in">
           Sing in
         </Link>
 
-        {/* <Link className={styles.header__profile} to="/profile">
-          <img className={styles.header__profile_photo} src={defaultUser} alt="profile photo" />
+        {/* <Link className={styles.profile} to="/profile">
+          <img className={styles.profilePhoto} src={defaultUser} alt="profile photo" />
         </Link> */}
       </div>
     </header>
